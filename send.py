@@ -14,10 +14,13 @@ if __name__ == "__main__":
         with open("users.txt", "r") as file:
             users = dict.fromkeys(file.read().split("\n"))
 
-        message = "Happy new year's!"
-        send_time = datetime(2021, 1, 1)
+        time_now = datetime.now()
+        send_time = datetime(time_now.year + 1, 1, 1)
 
-        wait_time = (send_time - datetime.now()).total_seconds()
+        with open("message.txt", "r") as file:
+            message = file.read()
+
+        wait_time = (send_time - time_now).total_seconds()
         time.sleep(wait_time)
 
         for user in users:
