@@ -10,7 +10,7 @@ class MessengerBot:
         self.client = Client(email, password)
 
     def uid(self, username):
-        """ Returns all the uid of the user. """
+        """ Returns the uid of the user. """
         try:
             user = self.client.searchForUsers(username)[0]
             return user.uid
@@ -19,10 +19,9 @@ class MessengerBot:
             print(f"User \"{username}\" does not exist!")
     
     def send_message(self, message, uid):
-        """ Send a message to uids at a given time, if one is given. """
+        """ Send a message to uid. """
         if type(uid) is str:
-            message = fb_message(message)
-            self.client.send(message, uid)
+            self.client.send(fb_message(message), uid)
 
         else:
             print("Uid \"{uid}\" does not exist!")
