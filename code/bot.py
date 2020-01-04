@@ -20,11 +20,11 @@ class MessengerBot:
     
     def send_message(self, message, uid):
         """ Send a message to uid. """
-        if type(uid) is str:
+        if not type(uid) is None:
             self.client.send(fb_message(message), uid)
 
         else:
-            print("Uid \"{uid}\" does not exist!")
+            print(f"Uid \"{uid}\" does not exist!")
     
     def logout(self):
         """ logs out with the bot. """

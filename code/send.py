@@ -24,6 +24,8 @@ if __name__ == "__main__":
         send_time = datetime(time_now.year + 1, 1, 1)
 
         wait_time = (send_time - time_now).total_seconds()
+        
+        print("Waiting...")
         time.sleep(wait_time)
 
         for uid in users.values():
