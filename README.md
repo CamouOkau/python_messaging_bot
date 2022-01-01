@@ -1,21 +1,17 @@
-# messenger_new_years_bot
-A facebook messenger bot that messages the people you care about on new year's.
+# Python messaging bot
+A messaging bot written in python, that can automatically send messages to
+multiple users at a predetermined time. Currently, only messaging
+through facebook is supported, but in the future I plan on adding sms
+support.
 
-
-# Getting started
-## prerequisites:
-To be able to run this code you have to have install all the listed packages in *requirements.txt*.
-  
-## installation:
-Simply git pull this repo.
-
-# User guide
-## What and how do I run this?
-It's easy! If you followed all the steps in **getting started**, you need to:
-0. Navigate yourself to the *code* directory.
-1. Input all the usernames in *users.txt* you want the bot to send messages to.
-2. If you want to change the message, modify *message.txt* to your liking, all the text will be sent.
-2. Run *code/send.py*: `python3.6 send.py <your email> <your password>`
-  > Careful! Replace `<your email>` and `<your password>` with your **actuall** messenger *email* and *password*.
-3. You're done! The messages will be sent to your friends at excatly 00:00 new year's eve (local time).
-  > The program should terminate by itself when it sends out the messages.
+## User guide
+1. Install all the listed packages in *requirements.txt*.
+ > pip install -r requirements.txt
+2. Navigate yourself to the *code* directory.
+ > cd code
+3. Input all the users you want to send the message to in *users.txt*.
+4. Modify *message.txt* to your liking. This is the text that will be sent.
+5. Run *send*.py*: `python send.py <your email> <your password>`
+  > Replace `<your email>` and `<your password>` with your **actual** messenger *email* and *password*.
+6. You're done! The messages will be sent to your friends at excatly 00:00 new year's eve (local time).
+  > The program will terminate itself after sending out the messages.
